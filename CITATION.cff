@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  If you use branching-story-mcp in research or production, please cite it as
+  below and cite the bundled benchmark dataset by its DOI.
+title: "branching-story-mcp: A zero-dependency Model Context Protocol server for deterministic story state and the 2026 Consumer AI Story Continuity Benchmark"
+type: software
+authors:
+  - name: Ouba Studio
+    email: team@ouba.art
+    website: https://www.ouba.art
+date-released: "2026-11-27"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/ouba-studio/branching-story-mcp"
+website: "https://www.ouba.art/tools/benchmark-explorer"
+abstract: >-
+  branching-story-mcp exposes Ouba Studio's deterministic branching-story-kit
+  story-state kernel and the CC-BY-4.0 2026 Consumer AI Story Continuity
+  Benchmark to AI agents over the Model Context Protocol. It ships four tools
+  (validate_story_graph, step_story_state, query_ai_story_benchmark,
+  detect_state_drift) and two resources, with zero runtime dependencies in both
+  the Python and the Node/ESM implementations.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24549412"
+    description: Preprint — State Drift in Consumer LLM Interactive Fiction
+  - type: doi
+    value: "10.7910/DVN/YEBHQR"
+    description: Primary benchmark dataset (CC-BY-4.0)
+  - type: url
+    value: "https://github.com/ouba-studio/branching-story-mcp"
+  - type: url
+    value: "https://pypi.org/project/branching-story-mcp/"
+  - type: url
+    value: "https://jsr.io/@ouba-studio/branching-story-mcp"
+keywords:
+  - model-context-protocol
+  - mcp
+  - interactive-fiction
+  - branching-narrative
+  - story-state
+  - llm-evaluation
+  - silent-state-drift
+  - benchmark
+  - ouba

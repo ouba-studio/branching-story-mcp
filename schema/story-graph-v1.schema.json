@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ouba://schema/story-graph-v1",
+  "title": "branching-story-kit story graph v1",
+  "type": "object",
+  "required": [
+    "scenes",
+    "startScene"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable story identifier."
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable story title."
+    },
+    "startScene": {
+      "type": "string",
+      "description": "Scene id the reader enters first. The legacy alias `start` is accepted."
+    },
+    "start": {
+      "type": "string",
+      "description": "Legacy alias for startScene."
+    },
+    "initialState": {
+      "type": "object",
+      "description": "Initial story-state vector (relationship meters, flags, inventory).",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "string",
+          "boolean",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "scenes": {
+      "type": "object",
+      "description": "Map of scene id -> scene definition.",
+      "additionalProperties": {
+        "$ref": "#/$defs/scene"
+      }
+    }
+  },
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "required": [
+        "title",
+        "body"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string",
+          "description": "Scene prose. `{{key}}` interpolates state."
+        },
+        "ending": {
+          "type": "boolean",
+          "default": false
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choice"
+          }
+        }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string",
+          "description": "Target scene id."
+        },
+        "href": {
+          "type": "string",
+          "description": "External link target (no state change)."
+        },
+        "requires": {
+          "type": "object",
+          "description": "Guard predicate: state key -> minimum numeric value.",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "effects": {
+          "type": "object",
+          "description": "State mutations. Scalar numbers add, strings/booleans assign, and {op: set|add|append|delete, value} gives explicit control.",
+          "additionalProperties": true
+        }
+      }
+    },
+    "effectOp": {
+      "type": "object",
+      "required": [
+        "op"
+      ],
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "set",
+            "add",
+            "append",
+            "delete"
+          ]
+        },
+        "value": {}
+      }
+    }
+  }
+}

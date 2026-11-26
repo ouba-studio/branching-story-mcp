@@ -1,0 +1,56 @@
+{
+  "name": "@ouba-studio/branching-story-mcp",
+  "version": "1.0.0",
+  "description": "Zero-dependency MCP server for the branching-story-kit story-state kernel and the 2026 Consumer AI Story Continuity Benchmark.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./js/server.mjs",
+  "types": "./js/index.d.ts",
+  "mcpName": "io.github.ouba-studio/branching-story-mcp",
+  "bin": {
+    "branching-story-mcp": "./js/server.mjs"
+  },
+  "exports": {
+    ".": "./js/server.mjs",
+    "./kernel": "./js/kernel.mjs",
+    "./benchmark": "./js/benchmark.mjs"
+  },
+  "files": [
+    "js/",
+    "schema/",
+    "data/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node js/server.mjs",
+    "test": "node --test tests/test_js_server.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "interactive-fiction",
+    "branching-narrative",
+    "visual-novel",
+    "story-engine",
+    "ai-agents",
+    "benchmark",
+    "llm-evaluation",
+    "state-drift",
+    "ouba"
+  ],
+  "author": "Ouba Studio <team@ouba.art> (https://www.ouba.art/)",
+  "homepage": "https://www.ouba.art/tools/benchmark-explorer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouba-studio/branching-story-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ouba-studio/branching-story-mcp/issues"
+  }
+}

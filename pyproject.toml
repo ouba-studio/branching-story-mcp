@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "branching-story-mcp"
+version = "1.0.0"
+description = "Zero-dependency MCP server for the branching-story-kit story-state kernel and the 2026 Consumer AI Story Continuity Benchmark."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ouba Studio", email = "team@ouba.art" }]
+maintainers = [{ name = "Ouba Studio", email = "team@ouba.art" }]
+keywords = [
+  "mcp",
+  "model-context-protocol",
+  "mcp-server",
+  "interactive-fiction",
+  "branching-narrative",
+  "visual-novel",
+  "story-engine",
+  "story-state",
+  "ai-agents",
+  "benchmark",
+  "llm-evaluation",
+  "state-drift",
+  "ouba",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Games/Entertainment :: Role-Playing",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://www.ouba.art"
+Repository = "https://github.com/ouba-studio/branching-story-mcp"
+"Bug Tracker" = "https://github.com/ouba-studio/branching-story-mcp/issues"
+Changelog = "https://github.com/ouba-studio/branching-story-mcp/blob/main/CHANGELOG.md"
+"Benchmark Explorer" = "https://www.ouba.art/tools/benchmark-explorer"
+"Core Engine" = "https://github.com/ouba-studio/branching-story-kit"
+"Core Engine (PyPI)" = "https://pypi.org/project/branching-story-kit/"
+"Core Engine (JSR)" = "https://jsr.io/@ouba-studio/branching-story-kit"
+"Dataset DOI" = "https://doi.org/10.7910/DVN/YEBHQR"
+"Preprint (Zenodo)" = "https://doi.org/10.5281/zenodo.24549412"
+"Preprint (Figshare)" = "https://doi.org/10.6084/m9.figshare.35126743"
+"Preprint (SSRN)" = "https://doi.org/10.17613/rmr3y-hgk56"
+"Wikidata" = "https://www.wikidata.org/wiki/Q140090475"
+
+[project.scripts]
+branching-story-mcp = "branching_story_mcp.server:main"
+
+[tool.setuptools]
+packages = ["branching_story_mcp"]
+include-package-data = false
+
+[tool.setuptools.package-data]
+branching_story_mcp = ["py.typed"]

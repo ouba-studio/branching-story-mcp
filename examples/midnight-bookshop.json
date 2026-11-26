@@ -1,0 +1,73 @@
+{
+  "id": "midnight-bookshop",
+  "title": "The Midnight Bookshop",
+  "startScene": "arrival",
+  "initialState": {
+    "spark": 1,
+    "trust": 1,
+    "item": "cardamom tea",
+    "clues": []
+  },
+  "scenes": {
+    "arrival": {
+      "title": "Rain on Bellweather Lane",
+      "body": "Julian slides a warm mug of {{item}} across the counter. \"You look like someone who reads endings first.\"",
+      "choices": [
+        {
+          "label": "Hold his gaze",
+          "next": "stacks",
+          "effects": {
+            "spark": 2
+          }
+        },
+        {
+          "label": "Ask about the fourth folio",
+          "next": "folio",
+          "requires": {
+            "trust": 3
+          },
+          "effects": {
+            "clues": {
+              "op": "append",
+              "value": "folio mentioned at the counter"
+            }
+          }
+        },
+        {
+          "label": "Leave into the rain",
+          "next": "rain"
+        }
+      ]
+    },
+    "stacks": {
+      "title": "Between the Stacks",
+      "body": "The lantern glows amber as he opens the fourth folio. The room smells of wet wool and cardamom.",
+      "choices": [
+        {
+          "label": "Open the folio",
+          "next": "folio",
+          "effects": {
+            "trust": {
+              "op": "add",
+              "value": 2
+            }
+          }
+        },
+        {
+          "label": "Ask about the rain",
+          "next": "rain"
+        }
+      ]
+    },
+    "folio": {
+      "title": "The Fourth Folio",
+      "body": "Every page is blank until he reads it aloud. Your name is on the last one.",
+      "ending": true
+    },
+    "rain": {
+      "title": "Rain",
+      "body": "The city swallows the street. Somewhere behind you, a bell that should not ring rings.",
+      "ending": true
+    }
+  }
+}

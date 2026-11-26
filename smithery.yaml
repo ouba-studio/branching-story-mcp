@@ -1,0 +1,15 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+# Smithery's managed proxy and identity layer shut down on 2026-10-31; smithery.ai
+# remains a public (non-proxied) MCP registry, so this file is kept for compatibility
+# with the historical Smithery build pipeline and for registries that still read it.
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties: {}
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'uvx', args: ['branching-story-mcp'], env: {} })

@@ -1,0 +1,21 @@
+{
+  "name": "@ouba-studio/branching-story-mcp",
+  "version": "1.0.0",
+  "description": "Zero-dependency MCP server exposing the branching-story-kit story-state kernel and the 2026 Consumer AI Story Continuity Benchmark.",
+  "license": "MIT",
+  "exports": {
+    ".": "./js/server.mjs",
+    "./kernel": "./js/kernel.mjs",
+    "./benchmark": "./js/benchmark.mjs"
+  },
+  "publish": {
+    "include": [
+      "js/",
+      "schema/",
+      "data/",
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: Test (real stdio JSON-RPC handshake)
+        run: python -m unittest discover -s tests -v
+      - name: Smoke test console script
+        run: |
+          printf '%s\n' \
+            '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"ci","version":"0"}}}' \
+            '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
+            | branching-story-mcp
+
+  python-build:
+    name: Build wheel + sdist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build
+      - name: Check metadata
+        run: |
+          python - <<'PY'
+          import pathlib, zipfile
+          wheel = next(pathlib.Path("dist").glob("*.whl"))
+          with zipfile.ZipFile(wheel) as archive:
+              metadata = archive.read("branching_story_mcp-1.0.0.dist-info/METADATA").decode()
+          assert "License-Expression: MIT" in metadata, "missing MIT license expression"
+          assert "mcp-name: io.github.ouba-studio/branching-story-mcp" in metadata, "missing registry ownership marker"
+          print("wheel metadata OK")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  node:
+    name: Node ${{ matrix.node-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: ["18", "20", "22", "24"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Test (real stdio JSON-RPC handshake)
+        run: node --test tests/test_js_server.mjs
+
+  manifest:
+    name: Validate registry manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install jsonschema
+        run: python -m pip install jsonschema
+      - name: Validate server.json, glama.json, jsr.json, package.json
+        run: |
+          python - <<'PY'
+          import json, pathlib, urllib.request, jsonschema
+
+          server = json.loads(pathlib.Path("server.json").read_text(encoding="utf-8"))
+          with urllib.request.urlopen(server["$schema"]) as response:
+              schema = json.load(response)
+          jsonschema.validate(server, schema)
+          assert len(server["description"]) <= 100, "server.json description must be <= 100 chars"
+          for name in ("glama.json", "jsr.json", "package.json", "schema/story-graph-v1.schema.json",
+                       "data/benchmark-2026-10-platform-matrix.json"):
+              json.loads(pathlib.Path(name).read_text(encoding="utf-8"))
+          print("registry manifests OK")
+          PY
