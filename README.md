@@ -25,6 +25,12 @@ deno run -A jsr.io/@ouba-studio/branching-story-mcp/server   # JSR
 [![MCP](https://img.shields.io/badge/MCP-2024--11--05%20%7C%202025--03--26-1F6FEB)](https://modelcontextprotocol.io/)
 [![Dataset](https://img.shields.io/badge/dataset-10.7910%2FDVN%2FYEBHQR-9B1B31)](https://doi.org/10.7910/DVN/YEBHQR)
 [![branching-story-mcp MCP server](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp/badges/score.svg)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp)
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/ouba-studio/branching-story-mcp)
+[![SourceForge mirror — ouba-story-kit](https://img.shields.io/badge/SourceForge-ouba--story--kit-2b6cb0?style=flat-square&logo=sourceforge)](https://sourceforge.net/projects/ouba-story-kit/)
+[![Bitbucket mirror](https://img.shields.io/badge/Bitbucket-mirror-0052CC?style=flat-square&logo=bitbucket&logoColor=white)](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/)
+[![Pinterest — visual benchmark board](https://img.shields.io/badge/Pinterest-visual%20benchmark%20board-E60023?style=flat-square&logo=pinterest&logoColor=white)](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/)
+
+**Mirrors & ecosystem:** [SourceForge](https://sourceforge.net/projects/ouba-story-kit/) (release files + Git mirror of the core engine) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) · [Glama (rated A)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp) · [mcpservers.org](https://mcpservers.org/servers/ouba-studio/branching-story-mcp) · [Pinterest visual benchmark board](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/)
 
 ---
 
@@ -388,6 +394,9 @@ reason it requires an external probe rather than a self-report.
 | **Preprint (SSRN)** | [doi:10.17613/rmr3y-hgk56](https://doi.org/10.17613/rmr3y-hgk56) |
 | **Core engine** | [branching-story-kit](https://github.com/ouba-studio/branching-story-kit) · [PyPI](https://pypi.org/project/branching-story-kit/) · [JSR](https://jsr.io/@ouba-studio/branching-story-kit) |
 | **Benchmark explorer** | <https://www.ouba.art/tools/benchmark-explorer> |
+| **Directories** | [mcpservers.org](https://mcpservers.org/servers/ouba-studio/branching-story-mcp) · [Glama (rated A)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp) |
+| **Mirrors** | [SourceForge `ouba-story-kit`](https://sourceforge.net/projects/ouba-story-kit/) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) |
+| **Visual benchmark board** | [Pinterest — Interactive Romance & AI Story Benchmarks 2026](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/) |
 | **Wikidata** | [Q140090475](https://www.wikidata.org/wiki/Q140090475) |
 
 **APA 7**
