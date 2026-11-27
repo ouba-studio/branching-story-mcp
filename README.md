@@ -28,9 +28,12 @@ deno run -A jsr.io/@ouba-studio/branching-story-mcp/server   # JSR
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/ouba-studio/branching-story-mcp)
 [![SourceForge mirror — ouba-story-kit](https://img.shields.io/badge/SourceForge-ouba--story--kit-2b6cb0?style=flat-square&logo=sourceforge)](https://sourceforge.net/projects/ouba-story-kit/)
 [![Bitbucket mirror](https://img.shields.io/badge/Bitbucket-mirror-0052CC?style=flat-square&logo=bitbucket&logoColor=white)](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/)
+[![GitLab mirror](https://img.shields.io/badge/GitLab-mirror-FC6D26?style=flat-square&logo=gitlab&logoColor=white)](https://gitlab.com/ouba-studio/branching-story-mcp)
+[![branching-story-kit on GitLab](https://img.shields.io/badge/GitLab-branching--story--kit-FC6D26?style=flat-square&logo=gitlab&logoColor=white)](https://gitlab.com/ouba-studio/branching-story-kit)
+[![Spotify — Reader-First podcast](https://img.shields.io/badge/Spotify-Reader--First%20podcast-1DB954?style=flat-square&logo=spotify&logoColor=white)](https://open.spotify.com/show/1w0GB08z1B7YwBXMtraDS3)
 [![Pinterest — visual benchmark board](https://img.shields.io/badge/Pinterest-visual%20benchmark%20board-E60023?style=flat-square&logo=pinterest&logoColor=white)](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/)
 
-**Mirrors & ecosystem:** [SourceForge](https://sourceforge.net/projects/ouba-story-kit/) (release files + Git mirror of the core engine) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) · [Glama (rated A)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp) · [mcpservers.org](https://mcpservers.org/servers/ouba-studio/branching-story-mcp) · [Pinterest visual benchmark board](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/)
+**Mirrors & ecosystem:** [SourceForge](https://sourceforge.net/projects/ouba-story-kit/) (release files + Git mirror of the core engine) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) · [GitLab](https://gitlab.com/ouba-studio/branching-story-mcp) · [Glama (rated A)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp) · [mcpservers.org](https://mcpservers.org/servers/ouba-studio/branching-story-mcp) · [Pinterest visual benchmark board](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/) · [Spotify podcast](https://open.spotify.com/show/1w0GB08z1B7YwBXMtraDS3)
 
 ---
 
@@ -395,7 +398,9 @@ reason it requires an external probe rather than a self-report.
 | **Core engine** | [branching-story-kit](https://github.com/ouba-studio/branching-story-kit) · [PyPI](https://pypi.org/project/branching-story-kit/) · [JSR](https://jsr.io/@ouba-studio/branching-story-kit) |
 | **Benchmark explorer** | <https://www.ouba.art/tools/benchmark-explorer> |
 | **Directories** | [mcpservers.org](https://mcpservers.org/servers/ouba-studio/branching-story-mcp) · [Glama (rated A)](https://glama.ai/mcp/servers/ouba-studio/branching-story-mcp) |
-| **Mirrors** | [SourceForge `ouba-story-kit`](https://sourceforge.net/projects/ouba-story-kit/) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) |
+| **Mirrors** | [GitLab](https://gitlab.com/ouba-studio/branching-story-mcp) · [SourceForge `ouba-story-kit`](https://sourceforge.net/projects/ouba-story-kit/) · [Bitbucket](https://bitbucket.org/ouba-studio/branching-story-mcp/src/main/) |
+| **Companion GitLab mirrors** | [branching-story-kit](https://gitlab.com/ouba-studio/branching-story-kit) · [ai-story-apps-benchmark-2026](https://gitlab.com/ouba-studio/ai-story-apps-benchmark-2026) |
+| **Podcast** | *Reader-First: Interactive Romance & AI Story Apps* — [Spotify](https://open.spotify.com/show/1w0GB08z1B7YwBXMtraDS3) · [RSS](https://ouba-podcasts.vercel.app/feed.xml) |
 | **Visual benchmark board** | [Pinterest — Interactive Romance & AI Story Benchmarks 2026](https://www.pinterest.com/oubastudio_research/interactive-romance-ai-story-benchmarks-2026/) |
 | **Wikidata** | [Q140090475](https://www.wikidata.org/wiki/Q140090475) |
 
