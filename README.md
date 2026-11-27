@@ -491,3 +491,7 @@ the `ouba://benchmark/2026-10-platform-matrix` resource) is
 [Benchmark Explorer](https://www.ouba.art/tools/benchmark-explorer) ·
 [branching-story-kit](https://github.com/ouba-studio/branching-story-kit) ·
 team@ouba.art
+
+### Live November 2026 US App Store Audit & Interactive Benchmark
+- **Live iOS App Store Removals Tracker (Nov 28, 2026):** [7 Removed AI Chat Apps & Working Native iOS Alternatives](https://www.ouba.art/ai-chat-apps-removed-from-app-store-2026) (programmatic US iTunes Lookup API audit covering PolyBuzz, Talkie, Chai AI, SpicyChat, Tipsy Chat, Zeta, and Linky)
+- **Full 10-App Turn-15 Memory Benchmark Write-Up:** [I Tested 10 AI Story Apps](https://www.ouba.art/i-tested-ai-story-apps) · [Harvard Dataverse DOI 10.7910/DVN/YEBHQR](https://doi.org/10.7910/DVN/YEBHQR)
